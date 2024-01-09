@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Company;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,11 +12,32 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        // Seed Users
+        \App\Models\User::factory(10)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
+        // Seed a specific user
+        \App\Models\User::factory()->create([
+            'name' => 'Test User',
+            'email' => 'test@example.com',
+        ]);
+
+        // Seed Companies
+        Company::factory(10)->create();
+
+        // Uncomment the following lines if you want to seed additional data from other seeders
+        // $this->call([
+        //     PostSeeder::class,
+        //     CommentSeeder::class,
+        //     LikeSeeder::class,
+        //     FollowerSeeder::class,
+        // ]);
+
+        // Uncomment the following lines if you want to seed additional data from other seeders
+        // $this->call([
+        //     RoleSeeder::class,
+        //     UserSeeder::class,
+        //     ArticleSeeder::class,
+        //     CommentSeeder::class,
         // ]);
     }
 }
