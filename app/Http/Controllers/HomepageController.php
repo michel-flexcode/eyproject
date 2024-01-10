@@ -11,7 +11,7 @@ class HomepageController extends Controller
     {
         $companies = Company::all();
 
-        return view('homepage.blade.php', [
+        return view('homepage.index', [
             'companies' => $companies,
         ]);
     }
