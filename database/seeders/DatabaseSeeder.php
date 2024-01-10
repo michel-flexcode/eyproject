@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
         // Seed Companies
         Company::factory(10)->create();
 
+        $this->call(Company::class);
         // Uncomment the following lines if you want to seed additional data from other seeders
         // $this->call([
         //     PostSeeder::class,
