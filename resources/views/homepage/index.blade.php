@@ -833,7 +833,7 @@
 <body class="antialiased">
     <h1>Liste des articles</h1>
     <ul>
-        @foreach ($companies as $companies)
+        @foreach ($companies as $company)
             <li>{{ $company->name }}</li>
         @endforeach
     </ul>
